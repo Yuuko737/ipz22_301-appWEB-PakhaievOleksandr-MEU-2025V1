@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PerfectPC - Головна сторінка</title>
+    <style>
+	 img {
+            width: 300px;
+            border-radius: 10px;
+	    border: 1px solid #000000;
+            box-shadow: 0 0 27px 8.5px rgba(255, 255, 255, 0.6); /* Сияние белого цвета */
+            transition: box-shadow 0.3s ease-in-out; /* Плавное изменение */
+        }
+
+        .bg {
+            position: fixed; /* Фиксируем слои на месте */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Размещаем за основным содержимым */
+            animation: spaceJam 120s linear infinite;
+        }
+
+        .background {
+            background: url('https://denis-creative.com/wp-content/uploads/2019/03/background.png') repeat;
+            background-size: cover;
+        }
+
+        .midground {
+            background: url('https://denis-creative.com/wp-content/uploads/2019/03/midground.png') repeat;
+            background-size: cover;
+            animation-duration: 60s;
+        }
+
+        .foreground {
+            background: url('https://denis-creative.com/wp-content/uploads/2019/03/foreground.png') repeat;
+            background-size: cover;
+            animation-duration: 30s;
+        }
+
+        @keyframes spaceJam {
+            100% {
+                background-position: -2500px -500px;
+            }
+        }
+
+        /* Общий стиль для страницы */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background: linear-gradient(45deg, #7B68EE, #191970);
+            position: relative;
+        }
+
+        header, main, footer {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            position: relative;
+            z-index: 1; /* Содержимое поверх фоновых слоев */
+        }
+
+        header h1 {
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #fff;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgba(280, 280, 280, 0.2);
+        }
+
+        ul, ol {
+            margin: 10px 0;
+        }
+
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        form input, form textarea, form button {
+            padding: 10px;
+            border: none;
+            border-radius: 15px;
+        }
+
+        form button {
+            background-color: #808080;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #696969;
+        }
+
+        a {
+            color: #ffeead;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Слои фона -->
+    <div class="bg background"></div>
+    <div class="bg midground"></div>
+    <div class="bg foreground"></div>
+
+    <!-- Основное содержимое -->
+    <header>
+        <h1 style="font-size: 35px;">PerfectPC</h1>
+        <h1 style="font-size: 22px;">Створи комп'ютер своєї мрії</h1>
+    </header>
+
+    <main>
+        <!-- Зображення -->
+        <img src="https://s.ek.ua/posts/files/4396/wide_pic.jpg" alt="Приклад комп'ютера">
+
+        <!-- Таблиця -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Компонент</th>
+                    <th>Характеристика</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Процесор</td>
+                    <td>Intel i9</td>
+                </tr>
+                <tr>
+                    <td>Відеокарта</td>
+                    <td>NVIDIA RTX 4090</td>
+                </tr>
+                <tr>
+                    <td>Оперативна пам'ять</td>
+                    <td>32GB DDR5</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Списки -->
+        <section>
+            <h2>Переваги</h2>
+            <ul>
+                <li>Висока продуктивність</li>
+                <li>Гнучке налаштування</li>
+                <li>Доступні ціни</li>
+            </ul>
+            <h2>Кроки для створення</h2>
+            <ol>
+                <li>Виберіть компоненти</li>
+                <li>Зберіть усі частини</li>
+                <li>Встановіть програмне забезпечення</li>
+            </ol>
+        </section>
+
+        <!-- Форма -->
+        <section>
+            <h2>Зворотній зв'язок</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Ваше ім'я" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <textarea name="message" rows="5" placeholder="Ваше повідомлення" required></textarea>
+                <button type="submit">Надіслати</button>
+            </form>
+        </section>
+
+        <!-- Посилання -->
+        <section>
+            <p>Детальніше про наші послуги на <a href="description.html">сторінці опису</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PerfectPC</p>
+    </footer>
+</body>
+</html>
